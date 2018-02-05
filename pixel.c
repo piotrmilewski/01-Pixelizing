@@ -2,9 +2,9 @@
 
 int main(){
 
-  int i = 0;
-  int color = 0;
-  int r, g, b;
+  int i = 0; //for incrementation
+  int color = 0; //assigns color on a scale of 0 to 1535
+  int r, g, b; //rgb values
 
   //create image file
   int imageFile = open( "image.ppm", O_CREAT | O_RDWR, 0644);
@@ -58,6 +58,7 @@ int main(){
       sprintf(pixel, "%d %d %d ", r, g, b);
       write(imageFile, pixel, strlen(pixel));
 
+      //reset color rainbow
       if (color == 1535){
         color = 0;
       }
