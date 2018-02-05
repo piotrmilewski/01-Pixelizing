@@ -6,9 +6,10 @@
 #include <unistd.h>
 #include <string.h>
 #include <errno.h>
+#include <fcntl.h>
+#include <time.h>
 
-char *manSprintF(int, int, int);
-char *imageContents();
-int main();
+#define HEIGHT 512
+#define WIDTH 1535
 
-#endif PIXEL
+#endif
